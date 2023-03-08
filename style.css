@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content{
+    display: flex;
+}
+.box{
+    width: 300px;
+    height: 480px;
+}
+.box:nth-child(1){
+    background-color: hsl(31, 77%, 52%);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.box:nth-child(2){
+    background-color: hsl(184, 100%, 22%);
+}
+.box:nth-child(3){
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.box-content{
+    padding: 50px;
+}
+h1{
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display';
+    font-size: 40px;
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+}
+.btn{
+    margin-top: 70px;
+    padding: 13px;
+    width: 140px;
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 30px;
+    color: hsl(31, 77%, 52%);
+    font-family: 'Lexend Deca', sans-serif;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+}
+.box:nth-child(2) .box-content .btn{
+    color: hsl(184, 100%, 22%);
+}
+.box:nth-child(3) .box-content .btn{
+    color: hsl(179, 100%, 13%);
+}
+.box:nth-child(2) .box-content .btn:hover{
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+}
+.box:nth-child(3) .box-content .btn:hover{
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(179, 100%, 13%);
+}
+@media (max-width: 1000px){
+    .box{
+        width: 250px;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 800px){
+    main{
+        height: auto;
+    }
+    .main-content{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .box{
+        width: 100%;
+        height: auto;
+    }
+    .box:nth-child(1){
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+    .box:nth-child(3){
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
